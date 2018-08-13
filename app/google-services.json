@@ -1,0 +1,197 @@
+{
+  "project_info": {
+    "project_number": "686634584869",
+    "firebase_url": "https://creators-of-awesome-apps.firebaseio.com",
+    "project_id": "creators-of-awesome-apps",
+    "storage_bucket": "creators-of-awesome-apps.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:686634584869:android:2071274064dd25da",
+        "android_client_info": {
+          "package_name": "io.qchat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "686634584869-pq9kvgs0f27l3hl109ss79mn3921r8a7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBiWChC7SCm3deYT64D8NzPrR6B6-0qPZE"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:686634584869:android:6e46dba804d59f51",
+        "android_client_info": {
+          "package_name": "io.qdesigner"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "686634584869-pq9kvgs0f27l3hl109ss79mn3921r8a7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBiWChC7SCm3deYT64D8NzPrR6B6-0qPZE"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:686634584869:android:18026e6fb02b61ac",
+        "android_client_info": {
+          "package_name": "io.qmessenger"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "686634584869-pq9kvgs0f27l3hl109ss79mn3921r8a7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBiWChC7SCm3deYT64D8NzPrR6B6-0qPZE"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:686634584869:android:a2e07e3eab528b7b",
+        "android_client_info": {
+          "package_name": "io.qmusic"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "686634584869-pq9kvgs0f27l3hl109ss79mn3921r8a7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBiWChC7SCm3deYT64D8NzPrR6B6-0qPZE"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:686634584869:android:01511d5d81fa1e49",
+        "android_client_info": {
+          "package_name": "io.qnotes"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "686634584869-pq9kvgs0f27l3hl109ss79mn3921r8a7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBiWChC7SCm3deYT64D8NzPrR6B6-0qPZE"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:686634584869:android:f397aff5d154b7ed",
+        "android_client_info": {
+          "package_name": "io.qplayer"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "686634584869-pq9kvgs0f27l3hl109ss79mn3921r8a7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBiWChC7SCm3deYT64D8NzPrR6B6-0qPZE"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
