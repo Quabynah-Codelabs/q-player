@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
 	xmlns:tools="http://schemas.android.com/tools"
 	android:id="@+id/root"
 	android:layout_width="match_parent"
@@ -7,9 +8,32 @@
 	android:keepScreenOn="true"
 	tools:context=".ui.MainActivity">
 	
-	<com.google.android.exoplayer2.ui.PlayerView
+	<!--<com.google.android.exoplayer2.ui.PlayerView
 		android:id="@+id/player_view"
 		android:layout_width="match_parent"
-		android:layout_height="match_parent" />
+		android:layout_height="match_parent" />-->
+	
+	
+	<io.codelabs.widget.BaselineGridTextView
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_gravity="center"
+		android:text="@string/application_name"
+		android:textColor="@color/text_primary_dark"
+		android:textSize="@dimen/large_text_size"
+		app:fontFamily="@font/lato_bold" />
+	
+	<io.codelabs.widget.BaselineGridTextView
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_gravity="bottom|center_horizontal"
+		android:layout_marginStart="@dimen/spacing_normal"
+		android:layout_marginTop="@dimen/spacing_normal"
+		android:layout_marginEnd="@dimen/spacing_normal"
+		android:layout_marginBottom="@dimen/padding_dialog"
+		android:text="@string/watermark_codelabs"
+		android:textColor="@color/text_tertiary_dark"
+		android:textSize="14sp"
+		app:fontFamily="@font/lato" />
 
 </FrameLayout>

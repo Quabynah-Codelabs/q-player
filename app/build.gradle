@@ -1,24 +1,23 @@
 apply plugin: 'com.android.application'
-apply plugin: 'realm-android' // Realm needs to be before Kotlin or the build will fail
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-kapt'
 apply plugin: 'kotlin-android-extensions'
 
 android {
     compileSdkVersion 28
-    buildToolsVersion "28.0.2"
     defaultConfig {
         applicationId "io.qplayer"
         minSdkVersion 21
         targetSdkVersion 28
         versionCode 1
         versionName "0.0.1"
+        archivesBaseName = "qplayer"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
         release {
-            shrinkResources true
-            minifyEnabled true
+            shrinkResources false
+//            minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
         debug {
@@ -30,91 +29,38 @@ android {
         disable 'MissingTranslation'
     }
 
-    flavorDimensions "extensions"
-
-    productFlavors {
-        noExtensions {
-            dimension "extensions"
-        }
-        withExtensions {
-            dimension "extensions"
-        }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
     }
 }
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+
     // androidx
     implementation "androidx.appcompat:appcompat:$androidx_version"
     implementation "androidx.constraintlayout:constraintlayout:$constraintlayout_version"
     implementation "com.google.android.material:material:$androidx_version"
-
-    implementation "android.arch.navigation:navigation-fragment:$nav_version" // use -ktx for Kotlin
-    implementation "android.arch.navigation:navigation-ui:$nav_version" // use -ktx for Kotlin
 
     // glide
     implementation "com.github.bumptech.glide:glide:$glide_version"
     kapt "com.github.bumptech.glide:compiler:$glide_compiler_version"
 
     // exoplayer
-    implementation "com.google.android.exoplayer:exoplayer-core:$exoplayer_version"
-    implementation "com.google.android.exoplayer:exoplayer-dash:$exoplayer_version"
-    implementation "com.google.android.exoplayer:exoplayer-hls:$exoplayer_version"
-    implementation "com.google.android.exoplayer:exoplayer-smoothstreaming:$exoplayer_version"
-    implementation("com.google.android.exoplayer:exoplayer-ui:$exoplayer_version", {
-        exclude group: "com.android.support", module: "support-media-compat"
-    })
+    implementation "com.google.android.exoplayer:exoplayer:$exoplayer_version"
 
-    //todo: guava
-//    implementation "com.google.guava:guava:$guava_version"
-
-    //cast
-    implementation 'com.google.android.gms:play-services-cast-framework:16.0.1'
-
-    // rxbinding
-    implementation "com.jakewharton.rxbinding2:rxbinding-kotlin:$rxbinding_version"
-    implementation "com.jakewharton.rxbinding2:rxbinding-support-v4-kotlin:$rxbinding_version"
-
-    //lifecycle
-    // ViewModel and LiveData
-    implementation "androidx.lifecycle:lifecycle-extensions:$lifecycle_version"
-    kapt "androidx.lifecycle:lifecycle-compiler:$lifecycle_version" // use kapt for Kotlin
-
-    //room
-    implementation "androidx.room:room-runtime:$room_version"
-    kapt "androidx.room:room-compiler:$room_version" // use kapt for Kotlin
-    // optional - RxJava support for Room
-    implementation "androidx.room:room-rxjava2:$room_version"
-
-    //paging
-    implementation "androidx.paging:paging-runtime:$paging_version"
-    // optional - RxJava support
-    implementation "androidx.paging:paging-rxjava2:$paging_version"
-
-    // rxjava
-    implementation 'com.akaita.java:rxjava2-debug:1.2.2'
-    implementation "io.reactivex.rxjava2:rxandroid:$rxandroid_version"
-    implementation "io.reactivex.rxjava2:rxjava:$rxjava_version"
-    implementation "io.reactivex.rxjava2:rxkotlin:$rxkotlin_version"
-
-    // realm
-    implementation("io.realm:android-adapters:$realm_adapters_version") { transitive = false }
-    kapt "io.realm:realm-annotations:$realm_version"
-    kapt "io.realm:realm-annotations-processor:$realm_version"
-
-    //photoview
-    implementation 'com.github.chrisbanes:PhotoView:2.1.4'
+    //core
+    implementation project(':codelabsdk')
+    implementation("com.google.code.gson:gson:2.8.5")
 
     //firebase
     implementation 'com.google.firebase:firebase-core:16.0.1'
-    implementation 'com.google.firebase:firebase-firestore:17.0.4'
+    implementation 'com.google.firebase:firebase-firestore:17.1.0'
     implementation 'com.google.firebase:firebase-storage:16.0.1'
-    implementation 'com.google.firebase:firebase-auth:16.0.2'
-    implementation 'com.google.firebase:firebase-messaging:17.1.0'
-
-    //job dispatcher for firebase
-    implementation 'com.firebase:firebase-jobdispatcher:0.8.5'
+    implementation 'com.google.firebase:firebase-auth:16.0.3'
+    implementation 'com.google.firebase:firebase-messaging:17.3.0'
 
     //testing
     androidTestImplementation("androidx.test.espresso:espresso-core:$espresso_version", {
@@ -125,4 +71,15 @@ dependencies {
     testImplementation "junit:junit:$junit_version"
     testImplementation "org.mockito:mockito-core:$mockito_version"
 }
+
+kotlin {
+    experimental {
+        coroutines 'enable'
+    }
+}
+
+androidExtensions {
+    experimental = true
+}
+
 apply plugin: 'com.google.gms.google-services'

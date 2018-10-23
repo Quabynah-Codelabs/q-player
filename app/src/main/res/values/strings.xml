@@ -41,5 +41,16 @@
 	
 	<string name="download_ads_unsupported">IMA does not support offline ads</string>
 	<string name="content_url"><![CDATA[https://firebasestorage.googleapis.com/v0/b/creators-of-awesome-apps.appspot.com/o/Realm%20Database%20Android.mp4?alt=media&token=35249634-f54f-44af-ae50-d333d5fd916d]]></string>
+	<string name="watermark_codelabs">Made with love by <b>Quabynah CodeLabs</b></string>
+	
+	<string name="exo_controls_previous_description">Previous track</string>
+	<string name="exo_controls_next_description">Next track</string>
+	<string name="exo_controls_pause_description">Pause</string>
+	<string name="exo_controls_play_description">Play</string>
+	<string name="exo_controls_stop_description">Stop</string>
+	<string name="exo_controls_rewind_description">Rewind</string>
+	<string name="exo_controls_fastforward_description">Fast forward</string>
+	<string name="video">Video</string>
+	<string name="video_player">Video Player</string>
 
 </resources>
