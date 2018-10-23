@@ -37,6 +37,8 @@
 			android:theme="@style/QPlayer.Player">
 			<intent-filter>
 				<action android:name="MainActivity.ACTION_VIEW" />
+				
+				<category android:name="android.intent.category.BROWSABLE" />
 				<category android:name="android.intent.category.DEFAULT" />
 				
 				<data
